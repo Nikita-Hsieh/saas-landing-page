@@ -11,17 +11,28 @@ const navLinks = [
 
 export default function Navbar() {
     return (
-        <section className="py-4">
-            <div className="container">
-                <div className="grid grid-cols-2 border border-white/50 rounded-full p-2 px-4 items-center ">
+        <section className="py-4 lg:py-8">
+            <div className="container max-w-5xl">
+                <div className="grid grid-cols-2 lg:grid-cols-3 border border-white/50 rounded-full p-2 px-4 md:pr-2 items-center ">
                     <div>
                         <Image
                             src={logoImage}
                             alt="logo"
-                            className="h-9 w-auto "
+                            className="h-9 w-auto md:h-auto"
                         />
                     </div>
-                    <div className="flex justify-end">
+
+                    <div className="lg:flex justify-center items-center hidden">
+                        <nav className="flex gap-6 font-medium">
+                            {navLinks.map((link) => (
+                                <a href={link.href} key={link.label}>
+                                    {link.label}
+                                </a>
+                            ))}
+                        </nav>
+                    </div>
+
+                    <div className="flex justify-end gap-4">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -38,10 +49,18 @@ export default function Navbar() {
                             <line x1="3" y1="6" x2="21" y2="6" />
                             <line x1="3" y1="18" x2="21" y2="18" />
                         </svg>
-                        <button className="border border-white h-12 rounded-full px-6 font-medium">
+                        <Button
+                            variant="secondary"
+                            className="hidden md:inline-flex items-center"
+                        >
                             Log In
-                        </button>
-                        <button className="">Sign Up</button>
+                        </Button>
+                        <Button
+                            variant="primary"
+                            className="hidden md:inline-flex items-center"
+                        >
+                            Sign Up
+                        </Button>
                     </div>
                 </div>
             </div>
