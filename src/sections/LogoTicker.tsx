@@ -35,7 +35,7 @@ export default function LogoTicker() {
                             <Fragment key={i}>
                                 {logos.map((logo) => (
                                     <Image
-                                        key={logo.name}
+                                        key={`${logo.name}-${i}`}
                                         src={logo.image}
                                         alt={logo.name}
                                         width={120}
