@@ -36,7 +36,7 @@ export default function Faqs() {
                     Question? We've got{" "}
                     <span className="text-lime-400">answers</span>{" "}
                 </h2>
-                <div className="mt-12 flex flex-col gap-6">
+                <div className="mt-12 flex flex-col gap-6 max-w-xl mx-auto">
                     {faqs.map((faq, faqIndex) => (
                         <div
                             key={faq.question}
@@ -66,7 +66,8 @@ export default function Faqs() {
                             </div>
                             <div
                                 className={twMerge(
-                                    "mt-6, selectedIndex !== faqIndex && hidden"
+                                    "mt-6",
+                                    selectedIndex !== faqIndex && "hidden"
                                 )}
                             >
                                 <p className="text-white/50">{faq.answer}</p>
