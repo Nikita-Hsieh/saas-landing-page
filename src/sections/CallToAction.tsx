@@ -9,13 +9,15 @@ export default function CallToAction() {
         <section className="py-24">
             <div className="overflow-x-clip p-4">
                 <div
-                    className="flex gap-16 pr-16 text-5xl md:text-6xl font-medium whitespace-nowrap
+                    className=" group flex gap-16 pr-16 text-5xl md:text-6xl font-medium whitespace-nowrap cursor-pointer
              animate-marquee hover:[animation-play-state:paused]"
                 >
                     {Array.from({ length: 10 }).map((_, i) => (
                         <div key={i} className="flex items-center gap-16">
                             <span className="text-lime-400">&#10038;</span>
-                            <span>Try it for free</span>
+                            <span className="group-hover:text-lime-400">
+                                Try it for free
+                            </span>
                         </div>
                     ))}
                 </div>
