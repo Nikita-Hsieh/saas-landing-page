@@ -24,6 +24,17 @@ const config: Config = {
             md: "768px",
             lg: "1200px",
         },
+        extend: {
+            keyframes: {
+                marquee: {
+                    "0%": { transform: "translateX(0%)" },
+                    "100%": { transform: "translateX(-50%)" },
+                },
+            },
+            animation: {
+                marquee: "marquee var(--marquee-speed, 30s) linear infinite",
+            },
+        },
     },
     plugins: [],
 };
