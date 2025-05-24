@@ -2,7 +2,7 @@
 import Button from "@/components/Button";
 import Image from "next/image";
 import Pointer from "@/components/Pointer";
-import { delay, easeInOut, motion, useAnimate } from "framer-motion";
+import { motion, useAnimate } from "framer-motion";
 import { useEffect } from "react";
 import userCursor from "@/assets/images/cursor-you.svg";
 
