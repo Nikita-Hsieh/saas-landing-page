@@ -1,9 +1,6 @@
 "use client";
-import { useState } from "react";
 
 export default function CallToAction() {
-    const [isHovered, setIsHovered] = useState(false);
-
     return (
         <section className="py-24">
             <div className="overflow-x-clip p-4">
